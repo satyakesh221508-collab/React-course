@@ -1,4 +1,5 @@
 import { useState } from 'react'
+<<<<<<< HEAD
 
 function App() {
   const [color, setColor] = useState("black")
@@ -22,6 +23,43 @@ function App() {
         className="outline-none px-4 py-1 rounded-full text-white shadow-lg" style={{backgroundColor: "gray"}}>gray</button> </div>
        
       </div>
+=======
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+
+  // const [counter , setCounter] = useState(15)
+  let [counter , setCounter] = useState(15)
+
+  const maxValue = 20
+  const minValue = 0
+  function addValue(){
+    if(counter<maxValue){
+     console.log(counter)
+    counter = counter + 1
+    setCounter(counter)
+    }
+  }
+   function removeValue(){
+    if(counter>minValue){
+     counter = counter - 1
+     setCounter(counter)
+    }
+  }
+
+  return (
+    <>
+     <h1>Special Counter App</h1>
+      <h2>Counter Value:{counter}</h2>
+      <button
+      onClick={addValue}
+      >Add Value</button>
+      <button
+      onClick={removeValue}
+      >Remove Value</button>
+>>>>>>> 065f44a1b6f0958510ab64b01b8c7be283abd819
     </>
   )
 }
